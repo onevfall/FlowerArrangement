@@ -13,7 +13,7 @@ struct FlowerArrangementv1_1App: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBar()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -62,13 +62,6 @@ struct SkillStudy: View {
                     .modifier(StyleOfStudyButton())
             }
             Spacer()
-            
-            HStack {
-                skillLearning
-                freeDesigning
-                communityDiscussion
-                personalCenter
-            }
         }
 
         
@@ -115,34 +108,34 @@ struct SkillStudy: View {
 
         }
     }
-
-    var skillLearning: some View {
-        Button("技法学习") {
-            //Action
-
-        }
-    }
-    
-    var freeDesigning: some View {
-        Button("自由创作") {
-            //Action
-
-        }
-    }
-    
-    var communityDiscussion: some View {
-        Button("社区讨论") {
-            //Action
-
-        }
-    }
-    
-    var personalCenter: some View {
-        Button("个人中心") {
-            //Action
-
-        }
-    }
+// 使用了tarView，不再每个视图中构建按钮
+//    var skillLearning: some View {
+//        Button("技法学习") {
+//            //Action
+//
+//        }
+//    }
+//
+//    var freeDesigning: some View {
+//        Button("自由创作") {
+//            //Action
+//
+//        }
+//    }
+//
+//    var communityDiscussion: some View {
+//        Button("社区讨论") {
+//            //Action
+//
+//        }
+//    }
+//
+//    var personalCenter: some View {
+//        Button("个人中心") {
+//            //Action
+//
+//        }
+//    }
 }
 
 struct SkillStudy_Previews: PreviewProvider {

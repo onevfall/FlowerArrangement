@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF9462BB27F94EFA0078F439 /* FlowerArrangementv1_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9462BA27F94EFA0078F439 /* FlowerArrangementv1_1App.swift */; };
-		AF9462BD27F94EFA0078F439 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9462BC27F94EFA0078F439 /* ContentView.swift */; };
+		AF9462BD27F94EFA0078F439 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9462BC27F94EFA0078F439 /* TabBar.swift */; };
 		AF9462BF27F94EFD0078F439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9462BE27F94EFD0078F439 /* Assets.xcassets */; };
 		AF9462C227F94EFD0078F439 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9462C127F94EFD0078F439 /* Preview Assets.xcassets */; };
 		AF9462C427F94EFD0078F439 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9462C327F94EFD0078F439 /* Persistence.swift */; };
@@ -18,12 +18,14 @@
 		AF99B89E27F964AB00310D8A /* OpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99B89D27F964AB00310D8A /* OpenView.swift */; };
 		AF99B8A027F964B600310D8A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99B89F27F964B600310D8A /* LoginView.swift */; };
 		AF99B8A227F964D400310D8A /* StyleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99B8A127F964D400310D8A /* StyleSet.swift */; };
+		AFC7C39A28006BF700030A65 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC7C39928006BF700030A65 /* UserModel.swift */; };
+		AFC7C39D2800766D00030A65 /* FADocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC7C39C2800766D00030A65 /* FADocument.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF9462B727F94EFA0078F439 /* FlowerArrangementv1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowerArrangementv1.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9462BA27F94EFA0078F439 /* FlowerArrangementv1_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerArrangementv1_1App.swift; sourceTree = "<group>"; };
-		AF9462BC27F94EFA0078F439 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF9462BC27F94EFA0078F439 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		AF9462BE27F94EFD0078F439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF9462C127F94EFD0078F439 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9462C327F94EFD0078F439 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -33,6 +35,8 @@
 		AF99B89D27F964AB00310D8A /* OpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenView.swift; sourceTree = "<group>"; };
 		AF99B89F27F964B600310D8A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AF99B8A127F964D400310D8A /* StyleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSet.swift; sourceTree = "<group>"; };
+		AFC7C39928006BF700030A65 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		AFC7C39C2800766D00030A65 /* FADocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FADocument.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +69,11 @@
 		AF9462B927F94EFA0078F439 /* FlowerArrangementv1.1 */ = {
 			isa = PBXGroup;
 			children = (
+				AFC7C39B280075E000030A65 /* ViewModel */,
+				AFC7C398280069B300030A65 /* Model */,
 				AF99B89727F9642C00310D8A /* MainView */,
 				AF9462BA27F94EFA0078F439 /* FlowerArrangementv1_1App.swift */,
-				AF9462BC27F94EFA0078F439 /* ContentView.swift */,
+				AF9462BC27F94EFA0078F439 /* TabBar.swift */,
 				AF9462BE27F94EFD0078F439 /* Assets.xcassets */,
 				AF9462C327F94EFD0078F439 /* Persistence.swift */,
 				AF9462C527F94EFD0078F439 /* FlowerArrangementv1_1.xcdatamodeld */,
@@ -94,6 +100,22 @@
 				AF99B89A27F9646B00310D8A /* FreeDesign.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		AFC7C398280069B300030A65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFC7C39928006BF700030A65 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AFC7C39B280075E000030A65 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFC7C39C2800766D00030A65 /* FADocument.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,12 +190,14 @@
 			files = (
 				AF99B8A227F964D400310D8A /* StyleSet.swift in Sources */,
 				AF99B89E27F964AB00310D8A /* OpenView.swift in Sources */,
+				AFC7C39D2800766D00030A65 /* FADocument.swift in Sources */,
 				AF9462C727F94EFD0078F439 /* FlowerArrangementv1_1.xcdatamodeld in Sources */,
 				AF9462C427F94EFD0078F439 /* Persistence.swift in Sources */,
-				AF9462BD27F94EFA0078F439 /* ContentView.swift in Sources */,
+				AF9462BD27F94EFA0078F439 /* TabBar.swift in Sources */,
 				AF99B89B27F9646B00310D8A /* FreeDesign.swift in Sources */,
 				AF9462BB27F94EFA0078F439 /* FlowerArrangementv1_1App.swift in Sources */,
 				AF99B8A027F964B600310D8A /* LoginView.swift in Sources */,
+				AFC7C39A28006BF700030A65 /* UserModel.swift in Sources */,
 				AF99B89927F9645A00310D8A /* SkillStudy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
