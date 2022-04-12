@@ -11,12 +11,13 @@ import SwiftUI
 
 // 用于MainView.SkillStudy.StudyButton
 struct StyleOfStudyButton: ViewModifier {
+    var ifPass: Bool = false
     func body(content: Content) -> some View {
             content
             .font(.system(size: 35))
             .foregroundColor(.black)
             .frame(width: 100, height: 150)
-            .border(.black)
+            .border(ifPass ? .black : .blue)
             .padding()
         }
 }

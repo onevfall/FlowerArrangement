@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FreeDesign: View {
     
+    @ObservedObject var document: FlowerArrange
+    
     let testFlowers = "🌴🌱🌿☘️🍀🌳🌲🎄🌵🎋🍃🍂🍁🌷💐🌹🥀🌺🌸🌼"
     let testVases = "⚽️🏀🏈⚾️🥎🎾🏐🏉🥏🎱🪀🏓🏸🏒🏑🥍🏏"
     var body: some View {
@@ -132,6 +134,6 @@ struct FreeDesign: View {
 
 struct FreeDesign_Previews: PreviewProvider {
     static var previews: some View {
-        FreeDesign()
+        FreeDesign(document: FlowerArrange())
     }
 }

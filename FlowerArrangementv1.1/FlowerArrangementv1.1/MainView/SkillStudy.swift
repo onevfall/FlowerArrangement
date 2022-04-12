@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct SkillStudy: View {
+    
+    @ObservedObject var document: FlowerArrange
+    @State var ifJiFa1Pass = false
     var body: some View {
         VStack {
             HStack {
                 Button {
-                    //Action
+                    ifJiFa1Pass.toggle()
                 } label: {
                     Text("基础篇")
                         .font(.system(size: 25))
@@ -45,7 +48,7 @@ struct SkillStudy: View {
             Spacer()
             HStack {
                 JiFa1
-                    .modifier(StyleOfStudyButton())
+                    .modifier(StyleOfStudyButton(ifPass: ifJiFa1Pass))
                 JiFa2
                     .modifier(StyleOfStudyButton())
             }
@@ -108,38 +111,10 @@ struct SkillStudy: View {
 
         }
     }
-// 使用了tarView，不再每个视图中构建按钮
-//    var skillLearning: some View {
-//        Button("技法学习") {
-//            //Action
-//
-//        }
-//    }
-//
-//    var freeDesigning: some View {
-//        Button("自由创作") {
-//            //Action
-//
-//        }
-//    }
-//
-//    var communityDiscussion: some View {
-//        Button("社区讨论") {
-//            //Action
-//
-//        }
-//    }
-//
-//    var personalCenter: some View {
-//        Button("个人中心") {
-//            //Action
-//
-//        }
-//    }
 }
 
 struct SkillStudy_Previews: PreviewProvider {
     static var previews: some View {
-        SkillStudy()
+        SkillStudy(document: FlowerArrange())
     }
 }
