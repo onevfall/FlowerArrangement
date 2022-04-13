@@ -8,6 +8,6 @@
 import Foundation
 
 struct RuntimeModel {
-    var selectedView: Int
+    var selectedView: Int = 2
     
 }

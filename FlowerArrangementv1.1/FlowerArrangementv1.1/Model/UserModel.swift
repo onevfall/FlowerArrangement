@@ -11,17 +11,17 @@ import SwiftUI
 //import CoreData
 
 // testUser 用于模拟测试真实数据库中的用户
-struct tUser {
-    var username: String
-    var password: String
-    var image: UIImage // 头像 Image or UIImage?
-}
+//struct tUser {
+//    var username: String
+//    var password: String
+//    var image: UIImage // 头像 Image or UIImage?
+//}
 
 struct UserModel {
     
     // 登陆状态
     enum LoginStatus {
-        case LoginIn(user: tUser)
+        case LoginIn(user: User)
         case Visitor
     }
     

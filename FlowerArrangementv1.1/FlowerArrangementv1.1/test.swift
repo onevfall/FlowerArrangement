@@ -18,7 +18,7 @@ struct test: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \User.id, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \User.password, ascending: true)],
                   animation: .default)
     private var users: FetchedResults<User>
     
@@ -27,9 +27,10 @@ struct test: View {
     var body: some View {
         ScrollView {
             ForEach(users) { user in
-                Text(user.username ?? "un")
-                Text(user.password ?? "pw")
-                Text(String(user.id))
+                // 每个user的id不能相同！
+                Text(user.username ?? "unknown")
+                Text(user.password ?? "unknown")
+                Divider()
             }
         }
     }

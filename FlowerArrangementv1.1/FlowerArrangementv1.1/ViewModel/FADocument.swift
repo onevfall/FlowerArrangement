@@ -6,15 +6,14 @@
 //
 
 import Foundation
-import UIKit
-//import UIKit
+import SwiftUI
 
 class FlowerArrange: ObservableObject {
     
     let persistenceController = PersistenceController.shared
     
-    @Published private(set) var userModel: UserModel
-    @Published private(set) var runtimeModel: RuntimeModel
+    @Published /*private(set)*/ var userModel: UserModel
+    @Published /*private(set)*/ var runtimeModel: RuntimeModel
     
     var defaultUserImage: UIImage
     
@@ -39,9 +38,9 @@ class FlowerArrange: ObservableObject {
 //        userModel.loginStatus =
 //    }
     
-    func loadUserInformation(username: String, password: String) -> Void {
-        userModel.loginStatus = .LoginIn(user: tUser(username: username, password: password, image: defaultUserImage))
-    }
+//    func loadUserInformation(username: String, password: String) -> Void {
+//        userModel.loginStatus = .LoginIn(user: tUser(username: username, password: password, image: defaultUserImage))
+//    }
     
     // 若游客，则username为nil
     var username: String? {
@@ -54,17 +53,16 @@ class FlowerArrange: ObservableObject {
             }
         }
     }
-    var image: UIImage? {
-        get {
-            switch userModel.loginStatus {
-            case .LoginIn(let user):
-                return user.image
-            case .Visitor:
-                return nil
-            }
-        }
-    }
     
-    
+//    var image: UIImage? {
+//        get {
+//            switch userModel.loginStatus {
+//            case .LoginIn(let user):
+//                return user.image
+//            case .Visitor:
+//                return nil
+//            }
+//        }
+//    }
     
 }

@@ -16,19 +16,20 @@ struct PersonCenter: View {
         case .Visitor:
             Text("请先登陆")
         case .LoginIn(let user):
-            PersonInformationView(user: user)
+            PersonInformationView(user: user, document: document)
         }
     }
     
     struct PersonInformationView: View {
-        let user: tUser
+        let user: User
+        @ObservedObject var document: FlowerArrange
         var body: some View {
             // 头像user.image使用binary data存储
             // 转换过程 BinaryData-->UIImage-->Image
             VStack {
                 HStack {
-                    Image(uiImage: user.image)
-                    Text(user.username)
+                    //Image(uiImage: user.image)
+                    Text(user.username!)
                     Spacer()
                     Button {
                         // 修改个人信息
@@ -64,8 +65,10 @@ struct PersonCenter: View {
                 Spacer()
                 Button {
                     // 跳转 设置
+                    document.runtimeModel.selectedView = 5
+                    document.userModel.loginStatus = .Visitor
                 } label: {
-                    Text("设置")
+                    Text("登出")
                 }
 
             }

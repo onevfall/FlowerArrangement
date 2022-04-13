@@ -12,21 +12,17 @@ struct TabBar: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \User.id, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \User.username, ascending: true)],
                   animation: .default)
     private var users: FetchedResults<User>
     
     // ViewModel 在程序入口处定义
     @ObservedObject var document: FlowerArrange
-
     
-///   好像无法使用枚举？
-    
-    @State private var selectedView = 1
     
     var body: some View {
         
-        TabView(selection: $selectedView) {
+        TabView(selection: $document.runtimeModel.selectedView) {
             // 传给View的Document是否需要针对性？
             SkillStudy(document: document)
                 .environment(\.managedObjectContext, viewContext)
@@ -61,11 +57,9 @@ struct TabBar: View {
                 .tabItem {
                     Text("登陆")
                 }
-            test(document: document)
-                .environment(\.managedObjectContext, viewContext)
-                .tabItem {
-                    Text("test")
-                }
+                .tag(5)
+            
+
         }
     }
 }
