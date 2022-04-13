@@ -16,50 +16,55 @@ struct TabBar: View {
                   animation: .default)
     private var users: FetchedResults<User>
     
-    // ViewModel
-    @ObservedObject var document = FlowerArrange()
-    
+    // ViewModel 在程序入口处定义
+    @ObservedObject var document: FlowerArrange
 
+    
 ///   好像无法使用枚举？
-//    @State private enum selectedView {
-//        case skill_study
-//        case free_design
-//        case community_discussion
-//        case person_center
-//    }
     
     @State private var selectedView = 1
-    
     
     var body: some View {
         
         TabView(selection: $selectedView) {
             // 传给View的Document是否需要针对性？
             SkillStudy(document: document)
+                .environment(\.managedObjectContext, viewContext)
                 .tabItem {
                     Text("技法学习")
                 }
                 .tag(1)
             
             FreeDesign(document: document)
+                .environment(\.managedObjectContext, viewContext)
                 .tabItem {
                     Text("自由创作")
                 }
                 .tag(2)
             
             CommunityDuscuss(document: document)
+                .environment(\.managedObjectContext, viewContext)
                 .tabItem {
                     Text("社区讨论")
                 }
                 .tag(3)
+            
             PersonCenter(document: document)
+                .environment(\.managedObjectContext, viewContext)
                 .tabItem {
                     Text("个人中心")
                 }
                 .tag(4)
+            
             LoginView(document: document)
+                .environment(\.managedObjectContext, viewContext)
                 .tabItem {
                     Text("登陆")
+                }
+            test(document: document)
+                .environment(\.managedObjectContext, viewContext)
+                .tabItem {
+                    Text("test")
                 }
         }
     }
@@ -67,6 +72,6 @@ struct TabBar: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBar()
+        TabBar(document: FlowerArrange())
     }
 }

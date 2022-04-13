@@ -11,7 +11,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    /// [experiment]
+    /// [SQL]
     
     @ObservedObject var document: FlowerArrange
 
@@ -22,7 +22,7 @@ struct LoginView: View {
                   animation: .default)
     private var users: FetchedResults<User>
     
-    /// [experiment]
+    /// [SQL]
     
     @State private var username: String = ""
     @State private var password: String = ""
@@ -55,7 +55,7 @@ struct LoginView: View {
                         for user in users {
                             if user.username == self.username && user.password == self.password {
                                 ifLoginIn.toggle()
-                                document.loadUserInformation(un: username, pw: password)
+                                document.loadUserInformation(username: username, password: password)
                                 break
                             }
                         }

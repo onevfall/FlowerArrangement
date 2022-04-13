@@ -11,6 +11,8 @@ import UIKit
 
 class FlowerArrange: ObservableObject {
     
+    let persistenceController = PersistenceController.shared
+    
     @Published private(set) var userModel: UserModel
     @Published private(set) var runtimeModel: RuntimeModel
     
@@ -37,7 +39,7 @@ class FlowerArrange: ObservableObject {
 //        userModel.loginStatus =
 //    }
     
-    func loadUserInformation(un username: String, pw password: String) -> Void {
+    func loadUserInformation(username: String, password: String) -> Void {
         userModel.loginStatus = .LoginIn(user: tUser(username: username, password: password, image: defaultUserImage))
     }
     

@@ -17,7 +17,8 @@ struct StyleOfStudyButton: ViewModifier {
             .font(.system(size: 35))
             .foregroundColor(.black)
             .frame(width: 100, height: 150)
-            .border(ifPass ? .black : .blue)
+            .background(ifPass ? .yellow : .blue)
+            .border(.black)
             .padding()
         }
 }

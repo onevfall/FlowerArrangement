@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct FlowerArrangementv1_1App: App {
-    let persistenceController = PersistenceController.shared
+    
+    let document = FlowerArrange()
 
     var body: some Scene {
         WindowGroup {
-            TabBar()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            TabBar(document: document)
+                .environment(\.managedObjectContext,document.persistenceController.container.viewContext)
         }
     }
 }
