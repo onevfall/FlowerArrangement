@@ -24,7 +24,7 @@ class FlowerArrange: ObservableObject {
         //userModel = UserModel(loginStatus: .LoginIn(user: tUser(username: "星河不可及", password: "liuchang", image: UIImage(systemName: "person.fill")!)), staticModel: UserModel.StaticModel())
         
         defaultUserImage = UIImage(systemName: "person.fill")!
-        runtimeModel = RuntimeModel(selectedView: 1)
+        runtimeModel = RuntimeModel(selectedView: 4) // 首先显示第4个View
     }
     
     // public or private or ...

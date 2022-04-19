@@ -105,6 +105,7 @@
 		AF99B89727F9642C00310D8A /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				AFF4933D280ABFE1000CF682 /* SingleSkill */,
 				AF99B89827F9645A00310D8A /* SkillStudy.swift */,
 				AF99B89A27F9646B00310D8A /* FreeDesign.swift */,
 				AF1E9D3828057D32004E3520 /* CommunityDuscuss.swift */,
@@ -128,6 +129,13 @@
 				AFC7C39C2800766D00030A65 /* FADocument.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFF4933D280ABFE1000CF682 /* SingleSkill */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SingleSkill;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowerArrangementv1.1/Preview Content\"";
+				DEVELOPMENT_TEAM = TXH6MFC7F9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -371,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowerArrangementv1.1/Preview Content\"";
+				DEVELOPMENT_TEAM = TXH6MFC7F9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

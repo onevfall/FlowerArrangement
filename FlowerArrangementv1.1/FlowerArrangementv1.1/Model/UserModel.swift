@@ -7,15 +7,9 @@
 
 import Foundation
 import SwiftUI
-//import UIKit
-//import CoreData
+import CoreData
 
 // testUser 用于模拟测试真实数据库中的用户
-//struct tUser {
-//    var username: String
-//    var password: String
-//    var image: UIImage // 头像 Image or UIImage?
-//}
 
 struct UserModel {
     
